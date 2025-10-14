@@ -33,7 +33,7 @@ This software is designed to solve large, sparse linear systems of equations usi
 Check the following boxes when complete or add a note below if you encountered a problem.
 
 - [X] I have installed the software
-- [ ] I have run at least one example
+- [X] I have run at least one example
 - [X] I have run the test suite
 - [X] The test suite passes
 
