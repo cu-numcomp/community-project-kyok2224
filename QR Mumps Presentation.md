@@ -22,11 +22,11 @@ The software is targeted at computational scientists, engineers, and researchers
 
 ### **Setup**
 
-![Screenshot of setup code](img/setup.png)
+![Screenshot of setup code](img/setup_code.png)
 
 ### **Solve**
 
-![Screenshot of solution code](img/solution.png)
+![Screenshot of solution code](img/solution_code.png)
 
 ## **Question:** How accurate are the estimates from the qrm\_analyse phase compared to the actual values from the qrm\_factorize phase? And how does this accuracy change based on the matrix's structure?
 
