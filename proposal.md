@@ -13,8 +13,8 @@ This software is designed to solve large, sparse linear systems of equations usi
 
 | Description | Your answer |
 |---------|-----------|
-| Repository URL |https://github.com/JuliaQR/QRMumps.jl    |
-| Main/documentation website |https://julialinearalgebra.github.io/QRMumps.jl/stable/    |
+| Repository URL |[https://github.com/JuliaQR/QRMumps.jl](https://github.com/JuliaSmoothOptimizers/QRMumps.jl)    |
+| Main/documentation website |[https://julialinearalgebra.github.io/QRMumps.jl/stable/](https://qr_mumps.gitlab.io/)    |
 | Year project was started | 2017  |
 | Number of contributors in the past year | 2 |
 | Number of contributors in the lifetime of the project | 6  |
