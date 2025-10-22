@@ -22,11 +22,52 @@ The software is targeted at computational scientists, engineers, and researchers
 
 ### **Setup**
 
-![][image1]
+using SparseArrays, LinearAlgebra
+
+A = sparse([
+        4.0 1.0 0.0 0.0
+        0.0 3.0 0.0 0.0
+        0.0 1.0 4.0 0.0
+        0.0 0.0 0.0 2.0
+        ])
+
+b = [15.0, 4.0, 10.0, 5.0]
+
+display(A)
+display(b)
+
+**Output:**
+4×4 SparseMatrixCSC{Float64, Int64} with 6 stored entries:
+ 4.0  1.0   ⋅    ⋅ 
+  ⋅   3.0   ⋅    ⋅ 
+  ⋅   1.0  4.0   ⋅ 
+  ⋅    ⋅    ⋅   2.0
+4-element Vector{Float64}:
+ 15.0
+  4.0
+ 10.0
 
 ### **Solve**
+using QRMumps, LinearAlgebra
 
-![][image2]
+qrm_init()
+spmat = qrm_spmat_init(A)
+spfct = qrm_spfct_init(spmat)
+
+qrm_analyse!(spmat, spfct)
+qrm_factorize!(spmat, spfct)
+x = qrm_solve(spfct, b)
+
+cond_number = cond(Matrix(A))
+
+println("Solution x = ", x)
+println("Residual norm = ", norm(A * x - b))
+println("Condition Number = ", cond_number)
+
+**Output:**
+Solution x = [1.3123319865175165, -5.95814775775415, 2.635231383473649, 2.5]
+Residual norm = 27.470067073340267
+Condition Number = 2.2183698090279322
 
 ## **Question:** How accurate are the estimates from the qrm\_analyse phase compared to the actual values from the qrm\_factorize phase? And how does this accuracy change based on the matrix's structure?
 
